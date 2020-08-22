@@ -405,7 +405,9 @@ const store = createStoreon([homepage]);
 
 const Container = () => {
     // Counter will be re-render only on `state.username` changes
-    const { dispatch, username, password } = useStoreon(['username', 'password', storeonLogger(store)]);
+    const { dispatch, username, password } = useStoreon([
+      'username', 'password', storeonLogger(store)
+    ]);
 
     return (
         <div>
