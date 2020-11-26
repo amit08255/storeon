@@ -6,7 +6,7 @@
 A tiny event-based Redux-like state manager for **React**, **Preact**,
 **[Angular]**, **[Vue]** and **[Svelte]**.
 
-* **Small.** 167 bytes (minified and gzipped). No dependencies.
+* **Small.** 185 bytes (minified and gzipped). No dependencies.
   It uses [Size Limit] to control size.
 * **Fast.** It tracks what parts of state were changed and re-renders
   only components based on the changes.
@@ -83,6 +83,8 @@ Third-party tools:
   and routes modification on the fly.
 * [`mariosant/storeon-streams`](https://github.com/mariosant/storeon-streams)
   is side effects management library.
+* [`octav47/storeonize`](https://github.com/octav47/storeonize)
+  is migrating tool from Redux to Storeon.
 
 ## Install
 
@@ -177,8 +179,8 @@ with changed keys.
 store.on('@init', () => ({ users:  { } }))
 ```
 
-An event listener accepts the current state as the first argument
-and optional event object as the second.
+An event listener accepts the current state as the first argument,
+optional event object as the second and optional store object as the third.
 
 So event listeners can be reducers as well. As in Redux’s reducers,
 your should change immutable.
